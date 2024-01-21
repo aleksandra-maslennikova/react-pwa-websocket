@@ -29,24 +29,6 @@ function App() {
   const [openedNotifications, setOpenedNotifications] = useState([]);
 
   useEffect(() => {
-    const ws = new WebSocket("wss:notification-server-gpxp.onrender.com");
-    setSocket(ws);
-
-    return () => {
-      ws.close();
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!socket) return;
-
-    socket.onmessage = (event) => {
-      console.log({ event });
-      setNotificationsList((list) => [...list, event?.data]);
-
-      // Handle notification data here
-    };
-
     if ("serviceWorker" in navigator && "PushManager" in window) {
       console.log("pushManager", navigator.serviceWorker);
       navigator.serviceWorker.ready.then((registration) => {
@@ -72,6 +54,24 @@ function App() {
           });
       });
     }
+
+    const ws = new WebSocket("wss:notification-server-gpxp.onrender.com");
+    setSocket(ws);
+
+    return () => {
+      ws.close();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!socket) return;
+
+    socket.onmessage = (event) => {
+      console.log({ event });
+      setNotificationsList((list) => [...list, event?.data]);
+
+      // Handle notification data here
+    };
 
     return () => {
       socket.onmessage = null;
