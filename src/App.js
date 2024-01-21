@@ -57,7 +57,7 @@ function App() {
             applicationServerKey: urlBase64ToUint8Array(publicKey),
           })
           .then((subscription) => {
-            console.log("subscription");
+            console.log({ subscription });
             // Send the subscription to the server
             fetch("https://notification-server-gpxp.onrender.com/subscribe", {
               method: "POST",
