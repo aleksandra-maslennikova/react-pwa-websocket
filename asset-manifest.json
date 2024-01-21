@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/react-pwa-websocket/static/css/main.b6868b0d.css",
-    "main.js": "/react-pwa-websocket/static/js/main.d5d08e2b.js",
+    "main.js": "/react-pwa-websocket/static/js/main.a31d6637.js",
     "static/js/787.71816e85.chunk.js": "/react-pwa-websocket/static/js/787.71816e85.chunk.js",
     "service-worker.js": "/react-pwa-websocket/service-worker.js",
     "static/media/logo.svg": "/react-pwa-websocket/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
     "static/media/notification.svg": "/react-pwa-websocket/static/media/notification.3147c07f931fb6fc92d4ef9e9ddc30f1.svg",
     "index.html": "/react-pwa-websocket/index.html",
     "main.b6868b0d.css.map": "/react-pwa-websocket/static/css/main.b6868b0d.css.map",
-    "main.d5d08e2b.js.map": "/react-pwa-websocket/static/js/main.d5d08e2b.js.map",
+    "main.a31d6637.js.map": "/react-pwa-websocket/static/js/main.a31d6637.js.map",
     "787.71816e85.chunk.js.map": "/react-pwa-websocket/static/js/787.71816e85.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b6868b0d.css",
-    "static/js/main.d5d08e2b.js"
+    "static/js/main.a31d6637.js"
   ]
 }
