@@ -38,6 +38,7 @@ registerRoute(
 );
 
 self.addEventListener("message", (event) => {
+  console.log("Message received", event);
   if (event.data && event.data.type === "SKIP_WAITING") {
     self.skipWaiting();
   }
