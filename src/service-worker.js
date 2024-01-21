@@ -45,6 +45,7 @@ self.addEventListener("message", (event) => {
 
 // Handle push events
 self.addEventListener("push", (event) => {
+  console.log("Push received", event);
   const options = {
     body: event.data.text(),
   };
