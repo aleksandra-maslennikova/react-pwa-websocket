@@ -29,6 +29,9 @@ function App() {
   const [openedNotifications, setOpenedNotifications] = useState([]);
 
   useEffect(() => {
+    const ws = new WebSocket("wss:notification-server-gpxp.onrender.com");
+    setSocket(ws);
+
     if ("serviceWorker" in navigator && "PushManager" in window) {
       console.log("pushManager", navigator.serviceWorker);
       navigator.serviceWorker.ready.then((registration) => {
@@ -54,9 +57,6 @@ function App() {
           });
       });
     }
-
-    const ws = new WebSocket("wss:notification-server-gpxp.onrender.com");
-    setSocket(ws);
 
     return () => {
       ws.close();
